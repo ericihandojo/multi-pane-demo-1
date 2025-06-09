@@ -1,7 +1,7 @@
 // This component serves as the main application layout, containing a top pane, left pane, center pane, right pane, and bottom pane.
 // It uses Angular's component architecture to organize the layout and functionality of the application.
 
-import { Component, signal } from '@angular/core';
+import { Component, ViewChild, ElementRef, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ResizeDirective } from './resize.directive';
 import { TopPaneComponent } from './top-pane/top-pane.component';
@@ -13,10 +13,10 @@ import { BehaviorSubject } from 'rxjs';
 
 interface User {
   firstName: string;
-  lastName:  string;
-  address:   string;
-  email:     string;
-  phone:     string;
+  lastName: string;
+  address: string;
+  email: string;
+  phone: string;
 }
 
 @Component({
@@ -28,8 +28,8 @@ interface User {
     TopPaneComponent,
     LeftPaneComponent,
     CenterPaneComponent,
-    RightPaneComponent,
-    BottomPaneComponent
+    BottomPaneComponent,
+    RightPaneComponent
   ],
   template: `
     <div class="app-container">
@@ -67,8 +67,8 @@ interface User {
         <div class="pane-section center-pane" #centerPane>
           <app-center-pane
             [selectedMenu]="selectedMenu()"
-            [userList$]="userList$"
             (submenuSelected)="onSubmenuSelected($event)"
+            (userAdded)="users = $event"
           ></app-center-pane>
         </div>
 
@@ -81,11 +81,11 @@ interface User {
             <app-right-pane
               [visible]="rightVisible()"
               [newTabLabel$]="newTabLabel$"
-              [userList$]="userList$"
-            ></app-right-pane>
+              [users]="users">
+            </app-right-pane>
           </div>
 
-          <!-- SPLITTER: center ↔ right (only if right is visible) -->
+          <!-- SPLITTER: center ↔ right -->
           <div
             class="splitter"
             appResize
@@ -102,8 +102,7 @@ interface User {
       </div>
     </div>
   `,
-  styles: [
-    `
+  styles: [`
     .app-container {
       height: 100vh;
       display: flex;
@@ -111,8 +110,12 @@ interface User {
     }
     .pane { flex-shrink: 0; }
 
-    .top-pane { height: 56px; }
-    .bottom-pane { height: 40px; }
+    .top-pane {
+      height: 56px; /* Material toolbar height */
+    }
+    .bottom-pane {
+      height: 40px;
+    }
 
     .middle-row {
       flex: 1;
@@ -154,41 +157,23 @@ interface User {
   `]
 })
 export class AppComponent {
-  username = 'user name here';
+  /** Demo username for top pane */
+  username = 'some dude name';
+
+  /** Left‐pane menu items */
   menus = ['menu1', 'menu2', 'menu3'];
+
+  /** Track which menu is selected */
   selectedMenu = signal<string | null>(null);
+
+  // In addition, add a users property to store the list of users from the center pane.
+  users: any[] = [];
+
+  /** Controls visibility of the right pane */
   private _rightVisible = signal<boolean>(true);
   rightVisible = this._rightVisible.asReadonly();
 
-  // Shared user list for center and right panes
-  //userList$ = new BehaviorSubject<User[]>([]);
-
-  /** Shared user list for center and right panes, seeded with default users */
-  userList$ = new BehaviorSubject<User[]>([
-    {
-      firstName: 'Alice',
-      lastName:  'Anderson',
-      address:   '123 Maple St',
-      email:     'alice.anderson@example.com',
-      phone:     '555-1000'
-    },
-    {
-      firstName: 'Bob',
-      lastName:  'Bennet',
-      address:   '456 Oak Ave',
-      email:     'bob.bennet@example.com',
-      phone:     '555-2000'
-    },
-    {
-      firstName: 'Carol',
-      lastName:  'Chen',
-      address:   '789 Pine Rd',
-      email:     'carol.chen@example.com',
-      phone:     '555-3000'
-    }
-  ]);
-
-  // Submenu clicks for opening tabs
+  /** Emits submenu clicks so RightPane opens a tab */
   newTabLabel$ = new BehaviorSubject<string | null>(null);
 
   onMenuSelect(menu: string) {
@@ -203,6 +188,10 @@ export class AppComponent {
     this._rightVisible.update(v => !v);
   }
 
-  onLogout() { console.log('Logout clicked'); }
-  onSettings() { console.log('Settings clicked'); }
+  onLogout() {
+    console.log('Logout clicked');
+  }
+  onSettings() {
+    console.log('Settings clicked');
+  }
 }

@@ -161,32 +161,7 @@ export class AppComponent {
   rightVisible = this._rightVisible.asReadonly();
 
   // Shared user list for center and right panes
-  //userList$ = new BehaviorSubject<User[]>([]);
-
-  /** Shared user list for center and right panes, seeded with default users */
-  userList$ = new BehaviorSubject<User[]>([
-    {
-      firstName: 'Alice',
-      lastName:  'Anderson',
-      address:   '123 Maple St',
-      email:     'alice.anderson@example.com',
-      phone:     '555-1000'
-    },
-    {
-      firstName: 'Bob',
-      lastName:  'Bennet',
-      address:   '456 Oak Ave',
-      email:     'bob.bennet@example.com',
-      phone:     '555-2000'
-    },
-    {
-      firstName: 'Carol',
-      lastName:  'Chen',
-      address:   '789 Pine Rd',
-      email:     'carol.chen@example.com',
-      phone:     '555-3000'
-    }
-  ]);
+  userList$ = new BehaviorSubject<User[]>([]);
 
   // Submenu clicks for opening tabs
   newTabLabel$ = new BehaviorSubject<string | null>(null);
