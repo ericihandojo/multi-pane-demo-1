@@ -131,6 +131,11 @@ interface User {
       overflow-y: auto;
       padding: 16px;
     }
+    .user-form-card,
+    .table-container,
+    .submenu-list {
+      background-color: #ECEFF1;  /* Use the same background for form, table, and submenu list */
+    }    
     .user-form-card {
       max-width: 600px;
       margin: 0 auto;
@@ -156,10 +161,21 @@ interface User {
     }
     .submenu-list {
       max-width: 200px;
-      margin: 0 auto;
+      margin: 0 auto;  
+      color: #37474F;             /* Dark text for readability */
+      padding: 10px;
+      border-radius: 4px;
     }
     mat-list-item {
       cursor: pointer;
+      padding: 8px 12px;
+    }
+    .selected {
+      background-color: #607D8B;  /* Darker color for selected state */
+      color: #FFFFFF;             /* White text for contrast */
+    }
+    mat-list-item:hover {
+      background-color: #CFD8DC; /* Slightly darker on hover */
     }
   `]
 })
@@ -175,33 +191,7 @@ export class CenterPaneComponent {
 
   userForm: FormGroup;
 
-  /*
-  // Default list of 3 users
-  users: User[] = [
-    {
-      firstName: 'John',
-      lastName: 'Doe',
-      address: '123 Main St',
-      email: 'john@example.com',
-      phone: '111-111-1111'
-    },
-    {
-      firstName: 'Jane',
-      lastName: 'Doe',
-      address: '456 Second St',
-      email: 'jane@example.com',
-      phone: '222-222-2222'
-    },
-    {
-      firstName: 'Alice',
-      lastName: 'Cooper',
-      address: '789 Third St',
-      email: 'alice@example.com',
-      phone: '333-333-3333'
-    }
-  ];
-  */
-
+  // Define the columns to be displayed in the table
   displayedColumns: string[] = ['lastName', 'firstName', 'address', 'email', 'phone'];
   submenus = ['submenu1', 'submenu2', 'submenu3'];
 
@@ -229,12 +219,6 @@ export class CenterPaneComponent {
       const current = this.userList$.getValue();
       this.userList$.next([...current, newUser]);
       this.userForm.reset();
-
-      // Add the new user to the local users array
-      //this.users.push(newUser);    
-
-      // Emit the updated users array so the parent can pass it to RightPaneComponent.
-      //this.userAdded.emit(this.users);
     }
   }
 

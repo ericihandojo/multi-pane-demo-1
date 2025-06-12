@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-top-pane',
@@ -15,9 +16,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatTooltipModule
   ],
   template: `
-    <mat-toolbar color="primary" class="top-toolbar">
+    <mat-toolbar class="top-toolbar">
       <!-- Left: App Icon -->
       <div class="left-area">
         <img src="assets/app-icon.png" alt="" class="app-icon" />
@@ -27,13 +29,22 @@ import { MatButtonModule } from '@angular/material/button';
       <!-- Right: Username, Logout, Settings, Collapse/Expand -->
       <div class="right-area">
         <span class="username">{{ username }}</span>
-        <button mat-icon-button (click)="logout.emit()">
+        <button mat-icon-button 
+                (click)="logout.emit()" 
+                matTooltip="Logout"
+                matTooltipPosition="below">
           <mat-icon>logout</mat-icon>
         </button>
-        <button mat-icon-button (click)="settings.emit()">
+        <button mat-icon-button 
+                (click)="settings.emit()"
+                matTooltip="Settings"
+                matTooltipPosition="below">
           <mat-icon>settings</mat-icon>
         </button>
-        <button mat-icon-button (click)="toggleRight.emit()">
+        <button mat-icon-button 
+                (click)="toggleRight.emit()"
+                [matTooltip]="rightVisible ? 'Collapse Right Pane' : 'Expand Right Pane'"
+                matTooltipPosition="below">
           <mat-icon>{{ rightVisible ? 'chevron_right' : 'chevron_left' }}</mat-icon>
         </button>
       </div>
@@ -43,6 +54,7 @@ import { MatButtonModule } from '@angular/material/button';
     .top-toolbar {
       display: flex;
       justify-content: space-between;
+      background-color:rgb(222, 228, 238) !important;
     }
     .left-area {
       display: flex;

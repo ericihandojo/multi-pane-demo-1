@@ -24,16 +24,19 @@ import { MatListModule } from '@angular/material/list';
     </div>
   `,
   styles: [`
-    .left-container {
-      height: 100%;
-      overflow-y: auto;
-    }
-    mat-list-item {
-      cursor: pointer;
-    }
-    .selected {
-      background-color: #e0e0e0;
-    }
+  .left-container {
+    height: 100%;
+    overflow-y: auto;
+    background-color:rgb(202, 215, 238);  /* Dark blue-gray */
+  }
+  mat-list-item {
+    cursor: pointer;
+    color: #FFFFFF;             /* White text for clarity */
+    padding: 10px 16px;
+  }
+  .selected {
+    background-color:rgb(228, 233, 241);  /* Lighter blue-gray for selected state */
+  }
   `]
 })
 export class LeftPaneComponent {

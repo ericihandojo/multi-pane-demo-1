@@ -88,7 +88,7 @@ interface Tab {
     .right-container {
       height: 100%;
       overflow-y: auto;
-      background-color: #f5f5f5;
+      background-color:rgb(202, 215, 238);
       display: flex;
       flex-direction: column;
     }
@@ -108,11 +108,21 @@ interface Tab {
       padding-left: 4px;
       height: 32px;
       */
+      /*
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 32px;
-      padding: 0 4px;      
+      padding: 0 4px;
+      */
+      position: relative;
+      display: block;
+      /*padding: 0 4px 0 4px;*/
+      height: 32px;
+      line-height: 32px;
+      /* Add right padding to account for the close button placed outside */
+      padding-right: 70px;
+      font-size: 16px;
     }
     .close-btn {
       /*
@@ -121,12 +131,14 @@ interface Tab {
       height: 24px;
       min-width: 24px;
       */
-      margin-left: auto;
-      width: 20px;
-      height: 20px;
-      min-width: 20px;
-      font-size: 10px;
-      line-height: 20px;      
+      position: absolute;
+      right: 4px;
+      padding-left: 20px;
+      width: 10px;
+      height: 10px;
+      min-width: 10px;
+      font-size: 5px;
+      line-height: 10px;
     }
   `]
 })
