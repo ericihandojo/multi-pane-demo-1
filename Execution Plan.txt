@@ -1,0 +1,686 @@
+Execution Plan
+
+Vision Overview
+
+Customer-led discussion
+
+- Define the boundaries and intent of the project by sharing the vision and needs of the business
+- What is the project expected to accomplish?
+- Discuss the prominent features expected
+- Do we have an architectural plan to get us there (system architecture, software architecture)? 
+
+
+Vision Activity
+
+Elevator Statement
+
+What: Brief statement designed to impart the intent of the project within two minutes
+
+Format
+
+For… (target customer)
+Who… (statement of need or opportunity of customer)
+The (product name) is a (product category)
+That (key benefit, compelling reason to use)
+Unlike (alternative solution in place today)
+Our product (statement of primary differentiation)
+
+
+Product roadmap
+
+R1 to Rx dates for :
+
+Architecture/Technology
+Features & Benefits
+Markets
+Events & Rhythims
+
+
+Project Approach
+
+Plan Driven Development
+
+Traditional methods were taken from industrial and other engineering fields and applied to software
+Plan-driven projects apply detailed, established processes to achieve “repeatability” (i.e., CMM)
+
+Common plan-driven project characteristics:
+Establish a detailed plan for all work
+“Execute” the plan. Monitor or “track” execution. Plans often involve the following activities:
+Analysis and development of requirement specifications
+Design of the system into interacting components
+Development of custom software components
+Integration of all components, test, delivery
+
+
+Instead of the way things are done....
+
+Requirements are not very good, sometimes really bad;
+Solution technologies are unproven and unfamiliar;
+People/Staffing issues are overlooked/oversimplified;
+Despite this stark lack of clarity and uncertainty,  plans are created anyway that:
+Magically satisfy the pre-ordained schedule and cost constraints!
+Then the “plan” is executed, but does not always go well:
+Emphasis on paper documents often hide the uncertainty
+Perpetual replans are done to try to find the “right” plan
+The long hours of the “Death March” begins...
+
+There is a better way
+
+Agile Manifesto (www.agilemanifesto.org)
+
+Individuals and Interactions over Process and Tools
+Working Software over Comprehensive documentation
+Customer Collaboration over Contract negotiation
+Responding to change over Following a plan
+
+
+Individuals and Interactions over Process and Tools
+
+Focus is on empowered, self-managing teams
+Management can work by…
+protecting a team from outside interference
+removing obstacles in the way of creating a product
+Complex systems cannot be predicted and are best managed using empirical process controls
+Therefore mgmt allows self-managing teams to build systems in an empirical manner
+Agile teams are empowered to make the necessary decisions in order to get the work done.
+Create the System as a Team and not as a Series of Handoffs
+Tools should be used to support, not replace conversations (e.g. distributed development teams, telecom solutions)
+Never underestimate the value of a simple phone call
+
+
+Working Software over Comprehensive documentation
+
+Traditionally, one would measure a project’s progress by the percent complete of the functional milestones (e.g. analysis complete, design complete, coding complete, test complete, etc)
+In agile projects, working software is the ultimate quantification of project status
+Instead of status meetings where everyone reports % complete, agile teams provide actual working product as a status report called a “Product Review” at the end of each iteration.
+Inspecting software that works enables us to respond appropriately to the true state of the project
+Designs change as the system is built, resulting in outdated documentation.
+Why waste time documenting ideas that will most likely change as implementation begins and as customer feedback is received?
+60 % of Software functionality is rarely or never used (Standish Group)
+Even though the stress is on working software, documentation is not bad.  If in doubt, ask the team: “Is it valuable? Are we better off for writing it? Are we obligated by law, and, if so, how can we find out what is the minimum we can do?”
+
+
+Customer Collaboration over Contract negotiation
+
+Traditionally, we identify and define everything the customer wants and then draw up a contract with payment and date specifications
+Many teams have found themselves in death-march situations, working 70-80 hour weeks to meet the deadline set forth in the contract.
+Customers find themselves committed to work that no longer makes sense.
+Agile “Customer Collaboration” implies that customers become a part of the development process.
+Agile teams value the contributions of the Customer and learn to let them make the business decision.
+Customers rely on important technical information from the team in order to make the business decision.
+Writing specs down and tossing them over the fence is not a good solution. Customer should be involved along the way.
+
+
+Responding to change over Following a plan
+
+Focusing on increments of working software and collaborating with the customer allow development teams to more readily respond to change.
+In plan-driven environments:
+All requirements are specified up front, broken down to the task level and estimated.
+Costs and dates are calculated bottom-up from these very granular tasks
+The resulting schedule becomes a baseline for the project and is used to measure project performance.
+Therefore it’s important to stay on task and control scope creep to eliminate cost overruns or schedule slip
+Agile Manifesto does not say that plans are not important. Agile plans follow more of a rolling wave approach using top-down planning.
+
+
+Guiding Principles
+
+Our highest priority is to satisfy the Customer through early and continuous delivery of valuable software
+Welcome changing requirements, even late in development.  Agile processes harness change for the customer’s competitive advantage
+Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale.
+Business people (stakeholders) and developers must work together daily throughout the project
+Build projects around motivated individuals.  Give them the environment and support they need, and trust them to get the job done.
+The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.
+
+Working software is the primary measure of progress.
+Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.
+Continuous attention to technical excellence and good design enhances agility
+Simplicity – the art of maximizing the amount of work not done – is essential.
+The best architectures, requirements and designs emerge from self-organizing teams.
+At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behavior accordingly.
+
+
+Development Approach
+
+Vision
+Product Roadmap
+Product Backlog
+Release Planning
+	Release Backlog
+Sprint Planning
+	Sprint Backlog
+Sprint Reviews
+
+
+Sequential vs. Overlapping Development
+
+Requirements
+Design
+Code
+Test
+
+Rather than doing all of one thing at a time...
+Scrum teams do a little of everything all the time..
+
+
+No changes during a sprint
+
+Plan sprint durations around how long you can commit to keeping change out of the sprint
+
+
+Roles
+
+Product Owner
+
+Define the features of the product
+Decide on release date and content
+Be responsible for the profitability of the product (ROI)
+Prioritize features according to market value 
+Adjust features and priority every iteration, as needed  
+Accept or reject work results
+Makes scope / schedule tradeoff decisions
+Manages the Product Backlog
+
+Scrum Master
+
+Represents management to the project / team.
+Communicate the process and ensure that it is followed. Responsible for enacting Scrum values and practices.
+Build team cohesion and foster good communication.
+Ensure that the team is fully functional and productive, strive to improve productivity.
+Enable close cooperation across all roles and functions.
+Remove barriers and impediments for the Team (internal and external).
+Shield the team from external interferences.
+Participate in the daily scrum, sprint review, sprint retrospectives and planning meetings.
+Educate outside groups about how the Team is working.
+
+The team
+
+Each Scrum team is typically 5-9 people
+Feature Teams are Cross-functional:
+Programmers, testers, user experience designers, etc.
+Members should be full-time if constraints permit (e.g. budget)
+May be exceptions (e.g., database administrator)
+Teams are self-organizing
+Ideally, no titles but rarely a possibility
+Membership should change only between sprints
+
+
+Product Backlog and User Story Preparation
+
+Product Backlog
+
+This represents the requirements
+A list of all desired work on the project
+Ideally expressed such that each item has value to the users or customers of the product 
+Prioritized by the Product Owner
+Reprioritized at the start of each sprint
+
+User Stories, a Means for Managing the Backlog
+
+Describes functionality that will be valuable to either a user or purchaser of a system or software
+Composed of three aspects (known as card / conversation / confirmation):
+A written description of the story used for planning (and as a reminder)
+Conversations about the story that serve to flesh out the details of the story
+Tests that convey and document details and that can be used to determine when a story is complete.
+Because user stories represent functionality that will be valued by the users the following examples do not make good user stories (maybe if you’re developing an API and the user of the system is a programmer)
+The software will be written in Java
+The program will connect to the database through connection pooling.
+
+Acceptance Tests: Capturing the User Story Expectations
+
+Acceptance testing is the process of verifying that stories were developed such that each works exactly the way the customer team expected it to work.
+Once an iteration begins, developers start coding and the customer team continues specifying tests (if not already authored).
+Acceptance tests provide a great deal of information that the programmers can use in advance of coding the story.
+E.g. Test with different copy counts (including one over the max value of 1 for register-controlled products).  Reminds you to handle cases in which an order is rejected due to copy count limits.
+Written as reminders about how to test the story.
+Tests should be written as early in an iteration as possible (ideally prior to the beginning of the iteration).
+Options (depending on technical proficiency):
+Annotate back of cards or software accordingly.
+Put tests in automated testing tool.
+
+Acceptance Test Identification Process
+
+Write these tests prior to the iteration, during the iteration planning meeting, and as new tests are uncovered during the sprint.
+Tests supposed to be specified by the customer (since the software is being written to fulfill a vision specified by the customer).
+Let’s the team know when a story has been correctly developed.
+Tests are generally written at the following times:
+Whenever the customer and developers talk about the story and want to capture explicit details
+As part of a dedicated effort at the start of an iteration but before programming begins
+Whenever new tests are discovered during or after programming of a story
+
+Acceptance Testing Responsibilities
+
+Developer Responsibilities
+May be responsible for automating the execution of acceptance tests if your team chooses to do so.
+Thinking about additional acceptance tests when you start development of a new story.
+Unit testing your code so that acceptance tests do not need to be specified for all the minutiae of a story.
+Customer Responsibilities
+Writing the acceptance tests
+Executing the acceptance tests
+
+Forecasting and Estimating
+
+Scientifically it is more difficult to produce an accurate plan the further out in the future you look.
+Many unknowns
+Incorrect or missing assumptions
+Scope and relevance changes
+It is wasteful to spend a large amount of time looking in detail at requirements far out into the future.
+These requirements may change
+These requirements may be removed
+Should instead focus on the most immediate priorities
+Release Planning looks at a shorter-term window allowing the business to focus on the immediate features that will add value.
+More accurate estimates and plans can be produced
+Don’t waste time re-planning / re-baselining plans far out into the future for requirements that may or may not eventually be included.
+
+Release Planning
+
+A release is made up of one or more iterations (typically a quarter)
+Ensure user stories are prioritized
+Estimate user stories as necessary (story points)
+Identify sprint velocity (# of user stories per sprint)
+Assign user stories to iterations in the release
+Ensure the number of story points assigned to any one iteration does not exceed the expected team velocity.
+
+Release Planning Session
+
+Inputs
+	Prioritized Product Backlog with Estimates
+	Product Vision
+	Team Velocity
+	Agenda
+	Date
+
+Attendees
+	Product Owner or Customer
+	Delivery Teams
+	Agile PM
+	Team Leads (opt)
+	Stakeholders (opt)
+
+Outputs
+	Release Plan
+	Assumptions
+	Risks 
+	Action items
+	Dependencies
+
+Release
+
+Release Planning -> Iteration -> Iteration -> Iteration -> Release Retrospective
+
+An agile release is a phase made up of several iterations / sprints 
+Common timeframe for a release is quarterly
+Release may be internal or external (based on needs of the organization)
+Process that kicks-off a release is called “release planning”
+This is a one or two-day event involving the entire team.
+
+
+Sprint Planning
+
+A sprint plan is a detailed task list that serves as a tactical guide to help accomplish an iteration’s goal.
+
+Inputs
+	Prioritized Product Backlog with Estimates
+	Product Vision
+	Team Velocity
+	Iteration Start/End Dates
+	Optional: Release Plan
+
+Attendees
+	Product Owner or Customer
+	Delivery Teams
+	Agile Project Manager
+	Team Leads
+	Stakeholders (opt)
+
+Outputs
+	Sprint Plan
+	Sprint Goal
+	Sprint Backlog
+	Assumptions
+	Risks
+	Actions
+	Communications
+	Dependencies
+
+
+Sprint Planning Meeting
+
+Team capacity & velocity	-> Sprint Planning Meeting
+Product backlog
+
+Business conditions		-> Sprint Planning
+Current product
+Technology
+
+Sprint planning meeting
+
+Sprint prioritization 		-> Sprint Goal
+
+Analyze and evaluate product backlog
+Select sprint goal
+
+Sprint planning			-> Sprint backlog
+
+Decide how to achieve sprint goal (design)
+Create sprint backlog (tasks) from product backlog items (user stories / features)
+Estimate sprint backlog in hours
+
+
+Sprint Planning
+
+Team selects items from the product backlog they can commit to completing
+Sprint backlog is created
+Tasks are identified and each is estimated (1-16 hours)
+Collaboratively, not done alone by the Scrum Master
+High-level design is considered
+
+
+Managing the Spring Backlog
+
+Individuals sign up for work of their own choosing (ideally), may be assigned
+Estimated work remaining is updated daily
+Any team member can add, delete or change the sprint backlog
+Work for the sprint emerges
+If work is unclear, define a sprint backlog item with a larger amount of time and break it down later
+Update work remaining as more becomes known
+
+
+Sprint Backlog for a Particular User Story
+
+Show Tasks list and number of story points for each work day
+
+
+Sprint Duration
+
+Typical durations are from 1 – 4 weeks.
+Most common is 2 weeks, then 3, then 4.  One is very challenging.
+Shorter sprints are ideal because teams and Product Owner’s don’t have to wait as long to see results or to make changes.
+However, there are reasons to move toward longer durations.  
+Less overhead due to planning sessions
+Reps from the Services will likely be needed (shorter iterations may be difficult to get commitment)
+Complex system requiring many integration points by feature teams and component teams to accomplish a demonstrable feature.
+Multiple geographic locations
+
+
+Example Sprint / Rhythm
+
+Development
+Sprint 1
+	New feature development
+	Continuous Integration, Automated Testing
+	Team Daily Scrums
+	Dev Scrum of Scrums
+Development
+Sprint 2
+	New feature development
+	Continuous Integration, Automated Testing
+	Team Daily Scrums
+	Dev Scrum of Scrums
+Dev / Release Sprint 6
+	Release Testing Sprint
+	Continuous Integration
+	Wrap-Up
+	Feature Freeze
+	Release Documentation
+	Regression & Pre-Production Testing
+	Team Daily Scrums
+	Test Scrum of Scrums
+
+
+Daily Scrum
+
+Parameters
+Daily
+15-minutes
+Stand-up
+Not for problem solving
+Whole world is invited
+Only team members, Scrum Master, Product Owner, can talk
+Helps avoid other unnecessary meetings
+Need to decide on High-Side or Low-Side call
+Would be nice to have access to high-side bridge if daily calls are classified (would allow more attendees if desired)
+Question: Preferable time for Product Owner organization?
+
+
+Sprint Review
+
+Team presents what it accomplished during the sprint
+Typically takes the form of a demo of new features or underlying architecture
+Informal
+2-hour prep time rule
+No slides typically
+Whole team participates
+With distributed teams, this may be a representative sample of the team who travels, or may be a remotely coordinated activity.
+Invite the necessary participants / stakeholders
+
+The product is reviewed for feedback purposes
+Opportunity for collaborative decision-making about the product
+Review the metrics and overall progress of the iteration.
+
+Inputs
+	Inputs
+		Sprint Plan
+		Sprint Accomplishment
+		Working Software
+		Metrics
+		Team Velocity
+Attendees
+	Attendees
+		Product Owner or Customer
+		Delivery Teams
+		Agile Project Manager
+		Team Leads
+		Stakeholders (opt)
+Outputs
+	Outputs
+		Product Feedback
+		Update to Product Backlog
+		Update to Release Plan
+
+
+Sprint Retrospective
+
+Periodically take a look at what is and is not working
+Typically 15–30 minutes
+Done after every sprint
+Whole team participates
+Scrum Master
+Product owner
+Team
+Possibly customers and others
+
+Suggested Format
+
+Whole team gathers and discusses what they’d like to:
+Start doing
+Stop doing
+Continue doing
+
+
+Execution Plan
+
+Desired Project Timeline (Release 1)
+
+Event
+
+Agile Training (Development Team)
+	Prospective Team to go through training on the tailored agile process for this project.
+
+	Attendees: Team
+
+Project Discovery Session
+	Kickoff meeting to discuss the Project Vision, Project Execution Plan and the approach to finalizing the Initial Backlog (right level of detail, prioritized). High-level architectures will be discussed. CONOPS / Capabilities Overview will be discussed if available (can opt to create an abbreviated Capabilities Overview including capability descriptions and high-level diagrams). Discuss the basics of User Stories and in particular review the results of the User Role Modeling activity (context stories are written based upon).
+
+	Attendees: Team, PO
+
+Product Discovery Session
+
+	The Backlog will be reviewed in detail.  User stories will be further refined or created, backlog will be prioritized. Contractual and Project constraints will be investigated and added as Backlog items.  Discuss approach for populating Acceptance Tests in Version One.  Backlog items will be prioritized accordingly to allow for release planning.
+
+	Attendees: Team, PO
+
+Processes Discovery Session
+
+	More detail on the execution plan as necessary. Discuss how VersionOne will be managed / maintained as well as the metrics approach. Discuss external dependencies in detail.  Release Planning may be incorporated into this session time permitting.
+
+	Attendees: Team, PO
+
+Agile Training (Product Owner Organization)
+
+	Intent is to do a deep dive into the Jira / Version One software to understand how to manage the Product Backlog and author Acceptance Tests. This may be led by TBD.
+
+	Attendees: Team Lead(s), Product Owner Organization
+
+Team Discovery Session
+	Team will meet to discuss project specifics and outcomes from earlier discovery session that may not have included the entire team.  Discuss Team Structure, Team Working Agreements, Core Values, Definition of “Done”, Communications Plan (Stakeholder Interactions), Artifacts, Team Room discussion, High-level software architecture.
+
+	Attendees: Team
+
+Product Backlog Estimating Activity
+	Team will meet to perform some initial Product Backlog Estimates (Story Point Estimating).  Sufficient backlog entries will be estimated to at least cover the first release worth of sprints.
+
+	Attendees: Team (required), Product Owner Organization (as needed)
+
+Initial Velocity Calculation Session
+	Team will calculate initial velocity figure to be used in Release Planning and Sprint 0/1 planning.
+
+	Attendees: Team
+
+Release Planning
+	Meeting to peform release planning for the first release. 
+
+	Attendees: Team, PO
+
+Sprint 0 Planning
+	Planning event for Sprint 0 (Preparation Sprint)
+
+	Attendees: Team, Product Owner Organization, Select Stakeholder Reps
+
+Product Backlog Grooming for Sprint 1
+	Groom the Product Backlog for Sprint 1
+	
+	Attendees: PO, Jira/Version One lead
+
+Sprint 0 Review
+	Review / Demo for Sprint 0 Activities
+
+	Attendees: Team, PO
+
+Sprint 0 Retrospective
+	Retrospective for Sprint 0
+
+	Attendees: Team (required), Product Owner Organization (as needed)
+
+Sprint 1 Planning
+	Planning event for Sprint 1
+
+	Attendees: Team, Product Owner Organization, Select Stakeholder Reps
+
+Virtual TIM (w/Stakeholders)
+	Virtual TIM with Stakeholders to discuss backlog items for current sprint and existing priorities. Solicit inputs.
+
+	Attendees: Team, Product Owner Organization, Stakeholder Reps
+
+Product Backlog Grooming for Sprint 2
+	Groom the Product Backlog for Sprint 2
+
+	Attendees: PO, Jira/Version One lead
+
+Sprint 2 Planning
+	Planning event for Sprint 2 (early to allow for TIM Material Prep)
+
+	Attendees: Team, Product Owner Organization, Stakeholder Reps
+
+Sprint 1 Review
+	Review / Demo for Sprint 1 Activities
+
+	Attendees: Team, PO
+
+Sprint 1 Retrospective
+	Retrospective for Sprint 1
+
+	Attendees: Team (required), Product Owner Organization (as needed)
+
+repeat ....
+
+Project Retrospective
+	Attendees: Team (required), Product Owner Organization (as needed)
+
+Project Closeout
+	Attendees: Team, Product Owner Organization
+
+
+
+Product Owner and Team Communications
+
+Product Owner is responsible for providing answers to the Team during Planning Meetings and on-demand.
+Need dedicated Service and Civil reps to be involved.
+Organization will assist the Product Owner in making business decisions by providing domain expertise and communicating with the stakeholder community.
+Communications between all Team Members and stakeholders.  Final prioritization decisions made by the Product Owner.
+
+
+Team Structure
+
+Feature Teams
+ Deliver end-to-end (“vertical slice”) functionality
+ Very cross-functional; has everyone on the team to work through all application layers
+Component Teams
+ Formed when teams are structured around the layers of an application
+ Normally recognizable because they don’t deliver functionality that end-users see.
+
+
+Product Backlog
+
+User Stories
+
+Describes functionality that will be valuable to either a user or 
+purchaser of a system or software.
+Composed of three aspects (known as card / conversation / confirmation):
+A written description of the story used for planning (and as a reminder)
+Conversations about the story that serve to flesh out the details of the story
+Tests that convey and document details and that can be used to determine when a story is complete
+Good to have stories that can be coded and tested between a half a day and perhaps two weeks by one or a pair of programmers.
+When a story is too large it’s sometimes referred to as an epic.  Epics can be split into stories of smaller size.
+However, do not continue splitting stories until we have a story that covers every last detail.
+
+What User Stories Provide
+
+Emphasize verbal rather than written communication.
+Comprehensible by users, developers, product owners, etc.
+The right size for planning.
+Work well for iterative development.
+Encourage deferring detail until you have the best understanding you are going to have about what you really need.
+
+User Stories – Gathering Data
+
+Perform Role Modeling Activity
+	Identify user roles (and optionally personas or extreme characters) prior to writing stories.
+	Helps the team better understand the role and their purpose, how they do their daily business, etc.
+
+Understand systems / users identified during Role Modeling Activity
+
+Techniques
+	Inherent Domain Knowledge / Experience (results from this approach portrayed on the following slides)
+	User Interviews
+	Questionnaires
+	Observation
+	Story-Writing Workshops
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
